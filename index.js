@@ -33,7 +33,7 @@ const Months = mongoose.model('Month', monthSchema)
 
 app.post('/stateMonth', express.json(), async (req, res) => {
    
-    const novoSchema = Object.keys(req.body).map((item, index) => {
+    Object.keys(req.body).map((item, index) => {
   
         if (item === 'Name') {
             atualizandoSchema[item] = 'String'
